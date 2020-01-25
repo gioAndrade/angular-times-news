@@ -1,0 +1,88 @@
+<div id="news-list">
+  <header class="d-flex justify-content-center align-items-center">
+    <h1>NYT</h1>
+  </header>
+
+  <main class="container" [formGroup]="form">
+    <h1>TEXTO SOBRE A LISTAGEM DE NOTICIAS...</h1>
+    <p>
+      news-list works!
+    </p>
+
+
+    <section class="filter-list">
+      <div class="input-group">
+        <select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon"
+          formControlName="section">
+          <option selected value="All">All</option>
+          <option value="Science">Science</option>
+          <option value="Technology">Technology</option>
+        </select>
+      </div>
+      <div class="input-group">
+        <select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon" formControlName="itens">
+          <option selected [value]="15">15 Itens</option>
+          <option [value]="50">50 Itens</option>
+          <option [value]="100">100 Itens</option>
+        </select>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 itens" *ngFor="let item of newsList; let i = index">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">{{item.title}}</h5>
+                <span class="card-subtitle mb-2 text-muted">{{item.updated_date | date}}</span>
+                <p class="card-text">{{item.byline}}
+                </p>
+                <div class="keys">keys:
+                  <span *ngFor="let keys of item.des_facet; let i = index; last as isLast">{{keys}}{{isLast || ','}}
+                  </span>
+                </div>
+                <div class="open-modal">
+                </div>
+              </div>
+              <div class="card-footer">
+                <app-modal [content]="item"></app-modal>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <section>
+      <nav aria-label="Page navigation example">
+        <ul class="pagination">
+          <li class="page-item">
+            <a class="page-link" href="#" aria-label="Previous">
+              <span aria-hidden="true">&laquo;</span>
+            </a>
+          </li>
+          <li class="page-item"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item">
+            <a class="page-link" href="#" aria-label="Next">
+              <span aria-hidden="true">&raquo;</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </section>
+  </main>
+</div>
+
+
+<!-- <div class="card" style="width: 18rem;">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.
+    </p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div> -->

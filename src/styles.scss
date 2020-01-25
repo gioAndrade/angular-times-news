@@ -1,0 +1,20 @@
+/* You can add global styles to this file, and also import other style files */
+.modal-dialog {
+  max-width: 800px;
+  modal-news-content {
+    .modal-header .modal-title {
+      margin: 0 10px;
+    }
+    .news-img {
+      text-align: center;
+      margin-bottom: 20px;
+      img {
+        width: 50%;
+      }
+    }
+    .btn-show-more {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+}
