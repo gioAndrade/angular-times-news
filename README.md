@@ -2,7 +2,7 @@
 
 Este projeto foi desenvolvido com o Angular consumindo a api do Times para apresentação de notícias sobre Ciências e Tecnologia.
 
-## Development server
+## Desenvolvimento
 
 Antes de tudo é necessário que possua o CLI do Angular e Node instalados:
 
@@ -12,14 +12,11 @@ Antes de tudo é necessário que possua o CLI do Angular e Node instalados:
 npm install -g @angular/cli
 ```
 
-**Node**
-[Donwload](https://nodejs.org/en/download/)
+Você pode instalar o **Node** pelo [Donwload](https://nodejs.org/en/download/) ou [Package Manager](https://nodejs.org/en/download/package-manager/).
 
-[Package Manager](https://nodejs.org/en/download/package-manager/)
+Para rodar a aplicação é necessário, primeiramente, entrar na pasta do projeto e instalar os pacotes executando o comando `npm install`.
 
-Para rodar a aplicação é necessário, primeiramente entrar na pasta do projeto e instalar os pacotes executando o comando `npm install`.
-
-Após a isntalação execute o comando `ng serve` e a aplicação estará rodando na porta 4200. Link `http://localhost:4200/`.
+Após a instalação execute o comando `ng serve` e a aplicação estará rodando na porta 4200. Link `http://localhost:4200/`.
 
 ## O Projeto
 
