@@ -12,7 +12,7 @@ Antes de tudo é necessário que possua o CLI do Angular e Node instalados:
 npm install -g @angular/cli
 ```
 
-Você pode instalar o **Node** pelo [Donwload](https://nodejs.org/en/download/) ou [Package Manager](https://nodejs.org/en/download/package-manager/).
+Você pode instalar o **Node** pelo [Download](https://nodejs.org/en/download/) ou [Package Manager](https://nodejs.org/en/download/package-manager/).
 
 Para rodar a aplicação é necessário, primeiramente, entrar na pasta do projeto e instalar os pacotes executando o comando `npm install`.
 
