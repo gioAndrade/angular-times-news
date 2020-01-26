@@ -7,31 +7,68 @@
     box-shadow: 0 11px 17px 0 rgba(0, 0, 0, 0.05);
     // color: green($color: #000000);
   }
-  main section {
-    &.filter-list {
-      display: flex;
-      justify-content: space-between;
-      padding: 15px;
-      .input-group {
-        width: 30%;
-        &:last-child{
-          width: 10%;
+  main {
+    .title {
+      margin-top: 10px;
+    }
+    section {
+      &.filter-list {
+        display: flex;
+        justify-content: space-between;
+        padding: 15px;
+        .input-group {
+          width: 30%;
         }
       }
-    }
-    .itens {
-      margin-bottom: 10px;
-      .card {
-        width: 100%;
-        height: 100%;
-        box-shadow: 0 11px 17px 0 rgba(0, 0, 0, 0.05);
+      .itens {
+        margin-bottom: 10px;
+        .card {
+          width: 100%;
+          height: 100%;
+          box-shadow: 0 11px 17px 0 rgba(0, 0, 0, 0.05);
 
-        .card-footer {
-          padding: 0 5px 5px 0;
-          background-color: unset;
-          border-top: unset;
-          display: flex;
-          justify-content: flex-end;
+          .card-footer {
+            padding: 0 5px 5px 0;
+            background-color: unset;
+            border-top: unset;
+            display: flex;
+            justify-content: flex-end;
+          }
+        }
+      }
+      .load,
+      .error {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        height: calc(100vh - 72px);
+        .loader {
+          border: 10px solid #f3f3f3;
+          border-radius: 50%;
+          border-top: 10px solid #abc4d5;
+          width: 120px;
+          height: 120px;
+          -webkit-animation: spin 2s linear infinite;
+          animation: spin 1.2s linear infinite;
+        }
+      }
+
+      @-webkit-keyframes spin {
+        0% {
+          -webkit-transform: rotate(0deg);
+        }
+        100% {
+          -webkit-transform: rotate(360deg);
+        }
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
         }
       }
     }

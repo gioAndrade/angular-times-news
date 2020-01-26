@@ -1,27 +1,30 @@
 # AngularTimesNews
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.9.
+Este projeto foi desenvolvido com o Angular consumindo a api do Times para apresentação de notícias sobre Ciências e Tecnologia.
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Antes de tudo é necessário que possua o CLI do Angular e Node instalados:
 
-## Code scaffolding
+**Angular**
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```
+npm install -g @angular/cli
+```
 
-## Build
+**Node**
+[Donwload](https://nodejs.org/en/download/)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+[Package Manager](https://nodejs.org/en/download/package-manager/)
 
-## Running unit tests
+Para rodar a aplicação é necessário, primeiramente entrar na pasta do projeto e instalar os pacotes executando o comando `npm install`.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Após a isntalação execute o comando `ng serve` e a aplicação estará rodando na porta 4200. Link `http://localhost:4200/`.
 
-## Running end-to-end tests
+## O Projeto
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Além do framework Angular e a api do Times, foram usados recursos do Bootstrap para personalização de estilo. Também foi adicionado alguns recursos para melhor apresentação e visualização do conteúdo.
 
-## Further help
+## Teste
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Não foram adicionados testes unitário na aplicação, além dos default inseridos pelo CLI do Angular.

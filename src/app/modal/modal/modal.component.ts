@@ -17,12 +17,8 @@ export class ModalComponent {
     };
     this.bsModalRef = this.modalService.show(ModalContentComponent, { initialState });
     this.bsModalRef.content.closeBtnName = 'Fechar';
-    console.log(this.content)
   }
 }
-
-/* This is a component which we pass in modal*/
-
 @Component({
   selector: 'modal-news-content',
   template: `
@@ -38,7 +34,7 @@ export class ModalComponent {
         </div>
         <p>{{abstract}}</p>
         <div class="btn-show-more">
-        <a href="{{short_url}}" target="_blank" class="btn btn-primary">Ver mais</a>
+        <a href="{{short_url}}" target="_blank" class="btn btn-light">Ver mais</a>
 
         </div>
     </div>

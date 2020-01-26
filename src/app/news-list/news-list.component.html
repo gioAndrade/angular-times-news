@@ -4,12 +4,7 @@
   </header>
 
   <main class="container" [formGroup]="form">
-    <h1>TEXTO SOBRE A LISTAGEM DE NOTICIAS...</h1>
-    <p>
-      news-list works!
-    </p>
-
-
+    <h1 class="title">The NYT lastest news</h1>
     <section class="filter-list">
       <div class="input-group">
         <select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon"
@@ -17,13 +12,6 @@
           <option selected value="All">All</option>
           <option value="Science">Science</option>
           <option value="Technology">Technology</option>
-        </select>
-      </div>
-      <div class="input-group">
-        <select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon" formControlName="itens">
-          <option selected [value]="15">15 Itens</option>
-          <option [value]="50">50 Itens</option>
-          <option [value]="100">100 Itens</option>
         </select>
       </div>
     </section>
@@ -50,26 +38,23 @@
               </div>
             </div>
           </div>
-
         </div>
       </div>
+      <div class="load" *ngIf="loading">
+        <div class="loader"></div>
+      </div>
+      <div class="error" *ngIf="error">
+        <img class="logo" src="assets/img/caution-1.png" alt="alert" srcset="" />
+        <h2>It seems that something bad happened, please try again later.</h2>
+      </div>
     </section>
-    <section>
-      <nav aria-label="Page navigation example">
+    <section class="d-flex justify-content-center" *ngIf="!error && !loading">
+      <nav aria-label="Page navigation">
         <ul class="pagination">
-          <li class="page-item">
-            <a class="page-link" href="#" aria-label="Previous">
-              <span aria-hidden="true">&laquo;</span>
-            </a>
+          <li class="page-item" *ngFor="let item of pageItens; let i = index"><button class="btn btn-light"
+              (click)="changePage(i)">{{i+1}}</button>
           </li>
-          <li class="page-item"><a class="page-link" href="#">1</a></li>
-          <li class="page-item"><a class="page-link" href="#">2</a></li>
-          <li class="page-item"><a class="page-link" href="#">3</a></li>
-          <li class="page-item">
-            <a class="page-link" href="#" aria-label="Next">
-              <span aria-hidden="true">&raquo;</span>
-            </a>
-          </li>
+
         </ul>
       </nav>
     </section>
